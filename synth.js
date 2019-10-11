@@ -17,19 +17,18 @@ var synth = new Tone.PolySynth(6, Tone.Synth, {
     }
 }).toMaster();
 
+/* 
 var loop = new Tone.Loop(function(time){
 	//triggered every eighth note. 
-    console.log(time);
     let note = sample(notes);
     synth.triggerAttackRelease(note, "8n", time);
 }, "8n").start(0);
-Tone.Transport.start();
+Tone.Transport.start(); */
 
 // create keyboard
 var keyboard = new AudioKeys();
 
 // let oscMap = {}
-
 keyboard.down(function() {
     /*
     let osc = ctx.createOscillator();
